@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadlock Recovery System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Deadlock Recovery System</h1>
+
+        <!-- Input for Processes and Resources -->
+        <div class="input-container">
+            <h3>Enter Number of Processes and Resources</h3>
+            <div class="input-group">
+                <input type="number" id="numProcesses" placeholder="Number of Processes" min="1">
+                <input type="number" id="numResources" placeholder="Number of Resources" min="1">
+                <button id="initialize">Initialize</button>
+            </div>
+        </div>
+
+        <!-- Resource Allocation Table -->
+        <div id="tables-container" class="hidden">
+            <h3>Enter Allocation Matrix</h3>
+            <div id="allocationTable"></div>
+
+            <h3>Enter Request Matrix</h3>
+            <div id="maxDemandTable"></div>
+
+            <h3>Enter Available Resources</h3>
+            <div id="availableResources"></div>
+
+            <div class="button-group">
+                <button id="calculateSafeSequence">Calculate Safe Sequence</button>
+                <button id="detectDeadlock">Detect Deadlock</button>
+            </div>
+        </div>
+
+        <!-- Result Display -->
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
